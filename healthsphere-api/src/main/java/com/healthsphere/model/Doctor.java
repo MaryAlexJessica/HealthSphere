@@ -1,14 +1,10 @@
 package com.healthsphere.model;
 
 import jakarta.persistence.*;
-import java.time.LocalDate;
 
 @Entity
-@Table(name = "patients")
-public class Patient {
-
-    public enum Gender { MALE, FEMALE, OTHER }
-
+@Table(name = "doctors")
+public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,14 +16,12 @@ public class Patient {
     @Column(name = "full_name")
     private String fullName;
 
-    private LocalDate dob;
-
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
-
+    private String specialization;
+    private String qualifications;
     private String phone;
 
-    private String address;
+    @Column(name = "clinic_address")
+    private String clinicAddress;
 
     // Getters & Setters
     public Long getId() { return id; }
@@ -39,15 +33,15 @@ public class Patient {
     public String getFullName() { return fullName; }
     public void setFullName(String fullName) { this.fullName = fullName; }
 
-    public LocalDate getDob() { return dob; }
-    public void setDob(LocalDate dob) { this.dob = dob; }
+    public String getSpecialization() { return specialization; }
+    public void setSpecialization(String specialization) { this.specialization = specialization; }
 
-    public Gender getGender() { return gender; }
-    public void setGender(Gender gender) { this.gender = gender; }
+    public String getQualifications() { return qualifications; }
+    public void setQualifications(String qualifications) { this.qualifications = qualifications; }
 
     public String getPhone() { return phone; }
     public void setPhone(String phone) { this.phone = phone; }
 
-    public String getAddress() { return address; }
-    public void setAddress(String address) { this.address = address; }
+    public String getClinicAddress() { return clinicAddress; }
+    public void setClinicAddress(String clinicAddress) { this.clinicAddress = clinicAddress; }
 }

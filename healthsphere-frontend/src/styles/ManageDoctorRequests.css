@@ -1,0 +1,84 @@
+/* ManageDoctors.css */
+
+.manage-doctors-container {
+    padding: 20px;
+    background: #f9fafb;
+    /* light background */
+    min-height: 100vh;
+}
+
+.page-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    /* dark gray */
+    margin-bottom: 20px;
+}
+
+.doctor-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-table th,
+.doctor-table td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.doctor-table th {
+    background: #f3f4f6;
+    font-weight: 600;
+    color: #374151;
+}
+
+.doctor-table tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.doctor-table tr:last-child {
+    border-bottom: none;
+}
+
+.doctor-table td {
+    color: #4b5563;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.approve-btn,
+.reject-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.approve-btn {
+    background: #16a34a;
+    /* green */
+    color: #fff;
+}
+
+.reject-btn {
+    background: #dc2626;
+    /* red */
+    color: #fff;
+}
+
+.approve-btn:hover,
+.reject-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}

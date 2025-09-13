@@ -1,0 +1,61 @@
+.table-wrapper {
+  background: white;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  min-width: 800px;
+  /* ensures columns don’t squish too much */
+}
+
+th,
+td {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #244034 !important;
+  /* black background */
+  color: #fff !important;
+  /* white text */
+  font-weight: bold;
+  /* like sidebar links */
+  font-size: 16px;
+  /* readable size */
+  letter-spacing: 0.5px;
+  /* spacing like sidebar text */
+  padding: 12px 14px;
+  /* similar padding to sidebar items */
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Highlight stock status */
+.low-stock {
+  color: #d97706;
+  /* amber */
+  font-weight: 600;
+}
+
+.stock-out {
+  color: #dc2626;
+  /* red */
+  font-weight: 700;
+}
